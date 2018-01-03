@@ -2,6 +2,7 @@
 
 # Install Docker
 sudo apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -43,4 +44,5 @@ sudo apt-get update && \
   sudo pkill -SIGHUP dockerd
 
 # Run ekholabs/toxicity
+sudo docker pull ekholabs/toxicity
 sudo docker run --runtime=nvidia -d -v $HOME:/data ekholabs/toxicity

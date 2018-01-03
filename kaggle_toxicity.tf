@@ -1,6 +1,7 @@
 resource "aws_s3_bucket" "models" {
   bucket = "ekholabs-kaggle-models"
-  acl    = "private"
+  acl    = "bucket-owner-full-control"
+  force_destroy = true
 }
 
 resource "aws_instance" "kaggle_toxicity" {
@@ -25,7 +26,7 @@ resource "aws_instance" "kaggle_toxicity" {
       user        = "ubuntu"
       private_key = "${file("aws/keys/aws-kaggle-IE.pem")}"
       agent       = "false"
-      timeout     = "1m"
+      timeout     = "3m"
     }
   }
 
@@ -38,7 +39,7 @@ resource "aws_instance" "kaggle_toxicity" {
       user        = "ubuntu"
       private_key = "${file("aws/keys/aws-kaggle-IE.pem")}"
       agent       = "false"
-      timeout     = "1m"
+      timeout     = "3m"
     }
   }
 
@@ -51,7 +52,7 @@ resource "aws_instance" "kaggle_toxicity" {
       user        = "ubuntu"
       private_key = "${file("aws/keys/aws-kaggle-IE.pem")}"
       agent       = "false"
-      timeout     = "1m"
+      timeout     = "3m"
     }
   }
 

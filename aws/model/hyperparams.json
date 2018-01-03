@@ -1,10 +1,10 @@
 {
   "classes" : 6,
-  "epochs" : 5,
+  "epochs" : 6,
   "batch_size" : 32,
-  "patience" : 2,
+  "patience" : 3,
   "input_dimensions" : 128,
-  "unique_words" : 30000,
+  "unique_words" : 20000,
   "max_review_length" : 400,
   "padding" : "pre",
   "embedding_dropout" : 0.2,

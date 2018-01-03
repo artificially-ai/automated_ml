@@ -1,8 +1,8 @@
 variable "access_key" {
-  default = "your_key_here"
+  default = "YOUR KEY HERE"
 }
 variable "secret_key" {
-  default = "your_secret_here"
+  default = "YOUR KEY HERE"
 }
 
 variable "aws_key_name" {
@@ -18,6 +18,13 @@ variable "availability_zone" {
 }
 
 variable "ami" {
+  # That's ekholabs private AMI which already contains all the dependencies needed.
+  # This AMi is private. In order to speed-up the creation of your image, I advise to
+  # Create you own AMI based on the AWS one, as I did.
+  #default = "ami-f391058a"
+
+  # That's the AWS Ubuntu 16.04 AMI used along the GPU instance and compliant with
+  # NVIDIA Drivers NVIDIA-Docker.
   default = "ami-8fd760f6"
 }
 
