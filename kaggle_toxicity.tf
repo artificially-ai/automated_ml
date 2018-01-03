@@ -31,7 +31,7 @@ resource "aws_instance" "kaggle_toxicity" {
 
   provisioner "file" {
     source      = "aws/s3/config"
-    destination = "/home/ubuntu/.aws/config"
+    destination = "/home/ubuntu/config"
 
     connection {
       type        = "ssh"
@@ -44,7 +44,7 @@ resource "aws_instance" "kaggle_toxicity" {
 
   provisioner "file" {
     source      = "aws/s3/credentials"
-    destination = "/home/ubuntu/.aws/credentials"
+    destination = "/home/ubuntu/credentials"
 
     connection {
       type        = "ssh"
