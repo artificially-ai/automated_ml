@@ -58,6 +58,8 @@ Your IAM credentials should be configured in the following files:
 * variables.tf: used by Terraform to be able to talk to AWS.
   * Do not forget to change the ```allowed_cidrs``` to allow ssh connection from your IP address.
 * credentials: used by AWS CLI tool to upload the weights / results to S3.
+* your_key_pair_.PEM: this file should be download from AWS EC2 Console and stored under ```aws/keys```.
+  It will be used to communicate with the Virtual Machine being created.
 
 Remark: do not make your credentials available on Github!
 
