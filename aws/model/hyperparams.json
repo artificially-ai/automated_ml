@@ -1,0 +1,17 @@
+{
+  "classes" : 6,
+  "epochs" : 5,
+  "batch_size" : 32,
+  "patience" : 2,
+  "input_dimensions" : 128,
+  "unique_words" : 30000,
+  "max_review_length" : 400,
+  "padding" : "pre",
+  "embedding_dropout" : 0.2,
+  "layer_1_dimenssions" : 128,
+  "layer_2_dimenssions" : 256,
+  "layer_3_dimenssions" : 512,
+  "dense_1_dimenssions" : 512,
+  "dense_2_dimenssions" : 1024,
+  "dense_dropout" : 0.4
+}
