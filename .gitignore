@@ -7,3 +7,4 @@
 
 # AWS Keys
 aws/keys/*
+.terraform
