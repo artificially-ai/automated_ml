@@ -29,6 +29,32 @@ resource "aws_instance" "kaggle_toxicity" {
     }
   }
 
+  provisioner "file" {
+    source      = "aws/s3/config"
+    destination = "/home/ubuntu/.aws/config"
+
+    connection {
+      type        = "ssh"
+      user        = "ubuntu"
+      private_key = "${file("aws/keys/aws-kaggle-IE.pem")}"
+      agent       = "false"
+      timeout     = "1m"
+    }
+  }
+
+  provisioner "file" {
+    source      = "aws/s3/credentials"
+    destination = "/home/ubuntu/.aws/credentials"
+
+    connection {
+      type        = "ssh"
+      user        = "ubuntu"
+      private_key = "${file("aws/keys/aws-kaggle-IE.pem")}"
+      agent       = "false"
+      timeout     = "1m"
+    }
+  }
+
   provisioner "remote-exec" {
     script = "scripts/prepare_instance.sh"
 
