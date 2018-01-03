@@ -26,7 +26,7 @@ In our case we will have only one subnet.
 
 # Dependencies
 
-First of all, make sure you have Hashcorp Terraform installed on your MacBook / Laptop.
+First of all, make sure you have Hashicorp Terraform installed on your MacBook / Laptop.
 You can find out how to get it here -> https://www.terraform.io/
 
 In order to continue, you will need the following:
