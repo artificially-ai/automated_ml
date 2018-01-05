@@ -57,7 +57,7 @@ Your IAM credentials should be configured in the following files:
 
 * variables.tf: used by Terraform to be able to talk to AWS.
   * Do not forget to change the ```allowed_cidrs``` to allow ssh connection from your IP address.
-* credentials: used by AWS CLI tool to upload the weights / results to S3.
+* credentials: used by AWS CLI tool to upload the model, weights and results to S3.
 * your_key_pair_.PEM: this file should be download from AWS EC2 Console and stored under ```aws/keys```.
   It will be used to communicate with the Virtual Machine being created.
 
@@ -109,8 +109,8 @@ below will give you insight on how the GPU is being used and what the Docker con
   * Tail the logs to follow up on the execution of the model
 
 With the default setting in the ```hyperparams.json``` file, the model will run for 6 epochs or
-stop if the loss goes up for 3 epochs in a row. After the execution is done, the best weights are copied
-to [S3](https://s3.console.aws.amazon.com/s3). You should download the weights from S3 before
+stop if the loss goes up for 3 epochs in a row. After the execution is done, the best model and weights are copied
+to [S3](https://s3.console.aws.amazon.com/s3) along with the predicted results. You should download the weights from S3 before
 destroying you infrastructure.
 
 To destroy everything, simply do:
@@ -123,9 +123,6 @@ might get a surprise by the end of the month.
 # WIP
 
 This is still working in progress. I'm going to continue the work on it and try to add some other features.
-For instance, I want to save the model as well. It makes life easy to load the model and then the weights
-on top of it, just in case you want to predict some new values on an already trained model.
-
 In addition to that, I also want to make it more generic and offer more sample file with preset hyper-parameters.
 
 Keep an eye on it.
