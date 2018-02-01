@@ -1,0 +1,21 @@
+{
+  "n_classes" : 6,
+  "epochs" : 6,
+  "batch_size" : 64,
+  "patience" : 1,
+  "activation_fn" : "relus",
+  "e_param" : 1.8,
+  "test_split" : 0.1,
+  "input_dimensions" : 768,
+  "unique_words" : 30000,
+  "max_review_length" : 300,
+  "padding" : "pre",
+  "layer_1_dimensions" : 256,
+  "layer_2_dimensions" : 256,
+  "layer_3_dimensions" : 512,
+  "kernel_1" : 2,
+  "kernel_2" : 4,
+  "kernel_3" : 5,
+  "dense_1_dimensions" : 1024,
+  "dense_dropout" : 0.25
+}

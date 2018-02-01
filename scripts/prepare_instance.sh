@@ -45,4 +45,4 @@ sudo apt-get update && \
 
 # Run ekholabs/toxicity
 sudo docker pull ekholabs/toxicity
-sudo docker run --runtime=nvidia -d -v $HOME:/data ekholabs/toxicity
+sudo docker run --runtime=nvidia -d -v $HOME:/data ekholabs/toxicity python main.py cnn

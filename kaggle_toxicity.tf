@@ -18,8 +18,21 @@ resource "aws_instance" "kaggle_toxicity" {
   }
 
   provisioner "file" {
-    source      = "aws/model/hyperparams.json"
-    destination = "/home/ubuntu/hyperparams.json"
+    source      = "aws/model/hyperparams_cnn.json"
+    destination = "/home/ubuntu/hyperparams_cnn.json"
+
+    connection {
+      type        = "ssh"
+      user        = "ubuntu"
+      private_key = "${file("aws/keys/aws-kaggle-IE.pem")}"
+      agent       = "false"
+      timeout     = "3m"
+    }
+  }
+
+  provisioner "file" {
+    source      = "aws/model/hyperparams_lstm.json"
+    destination = "/home/ubuntu/hyperparams_lstm.json"
 
     connection {
       type        = "ssh"

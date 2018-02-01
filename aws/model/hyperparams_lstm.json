@@ -1,0 +1,18 @@
+{
+  "n_classes" : 6,
+  "epochs" : 10,
+  "batch_size" : 64,
+  "patience" : 3,
+  "activation_fn" : "relus",
+  "e_param" : 1.8,
+  "test_split" : 0.1,
+  "input_dimensions" : 64,
+  "unique_words" : 20000,
+  "max_review_length" : 200,
+  "padding" : "pre",
+  "lstm_1_dimensions" : 64,
+  "lstm_2_dimensions" : 64,
+  "lstm_dropout" : 0.25,
+  "dense_1_dimensions" : 128,
+  "dense_dropout" : 0.25
+}
