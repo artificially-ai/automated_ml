@@ -4,11 +4,11 @@
   "batch_size" : 64,
   "patience" : 1,
   "test_split" : 0.1,
-  "input_dimensions" : 128,
-  "unique_words" : 30000,
-  "max_review_length" : 300,
+  "input_dimensions" : 16,
+  "unique_words" : 20000,
+  "max_review_length" : 200,
   "padding" : "pre",
-  "lstm_1_dimensions" : 64,
-  "lstm_2_dimensions" : 128,
+  "lstm_1_dimensions" : 4,
+  "lstm_2_dimensions" : 8,
   "lstm_dropout" : 0.25
 }
