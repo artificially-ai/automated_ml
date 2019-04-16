@@ -22,9 +22,9 @@ sudo apt-get update && \
   sudo apt-get install docker-ce -y
 
 # Install CUDA
-sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
-sudo wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
 sudo apt-get update -y
 sudo apt-get install cuda -y
 
@@ -36,7 +36,8 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 # Intall NVIDIA-Docker
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
   sudo apt-key add -
-curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu16.04/amd64/nvidia-docker.list | \
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
   sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 
 sudo apt-get update && \
